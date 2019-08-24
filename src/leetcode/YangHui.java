@@ -12,7 +12,9 @@ public class YangHui {
         start.add(1);
 
         List<List<Integer>> res = new ArrayList<>();
-        if (numRows == 0) return res;
+        if (numRows == 0) {
+            return res;
+        }
         res.add(start);
 
         for (int i = 1; i < numRows; i++) {
@@ -37,6 +39,7 @@ public class YangHui {
         Scanner scanner = new Scanner(System.in);
         int question = scanner.nextInt();
         YangHui yangHui = new YangHui();
-        yangHui.generate(question);
+        ArrayList solution= (ArrayList) yangHui.generate(question);
+        System.out.println(solution);
     }
 }
